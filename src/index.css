@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Default: Patient & Facility — Fresh Lilac */
+  --color-page: #F7F3FF;
+  --color-surface: #FFFCFF;
+  --color-surface-muted: #F1E9FF;
+  --color-text: #302441;
+  --color-text-muted: #70647F;
+  --color-border: #E9E1F3;
+  --color-primary: #8451E5;
+  --color-primary-hover: #7038CE;
+  --color-primary-soft: #E9DCFF;
+
+  --color-info: #5278D8;
+  --color-success: #34856B;
+  --color-warning: #D99A35;
+  --color-danger: #C65B65;
+
+  --radius-card: 12px;
+  --radius-control: 8px;
+  --shadow-floating: 0 6px 24px rgba(55, 40, 90, 0.08);
+}
+
+.theme-patient,
+.theme-facility {
+  --color-page: #F7F3FF;
+  --color-surface: #FFFCFF;
+  --color-surface-muted: #F1E9FF;
+  --color-text: #302441;
+  --color-text-muted: #70647F;
+  --color-border: #E9E1F3;
+  --color-primary: #8451E5;
+  --color-primary-hover: #7038CE;
+  --color-primary-soft: #E9DCFF;
+}
+
+.theme-lgu {
+  --color-page: #FBF4EC;
+  --color-surface: #FFFCF8;
+  --color-surface-muted: #F8EDE1;
+  --color-text: #44352C;
+  --color-text-muted: #806C5C;
+  --color-border: #EFE1D4;
+  --color-primary: #B96532;
+  --color-primary-hover: #A4562A;
+  --color-primary-soft: #F7E3D0;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', system-ui, Arial, sans-serif;
+  background-color: var(--color-page);
+  color: var(--color-text);
+}
+
+#root { min-height: 100vh; }
+
+.aio-page {
+  min-height: 100vh;
+  background-color: var(--color-page);
+  color: var(--color-text);
+}
+
+.aio-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.aio-surface-muted { background-color: var(--color-surface-muted); }
+
+.aio-btn-primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-radius: var(--radius-control);
+  transition: background-color 0.2s ease;
+}
+
+.aio-btn-primary:hover { background-color: var(--color-primary-hover); }
+.aio-text-muted { color: var(--color-text-muted); }
+.aio-floating { box-shadow: var(--shadow-floating); }
+
+/* Preserve existing Leaflet control positioning */
+.leaflet-top.leaflet-left {
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+.leaflet-control-zoom a {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+/* Shared back button — adapts to the active portal theme */
+.aio-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.aio-back-button:hover {
+  background-color: var(--color-primary-soft);
+  border-color: var(--color-primary);
+}
+
+.aio-back-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+/* Shared success styling */
+.aio-success {
+  color: #36734D;
+  background-color: #EAF3E9;
+  border: 1px solid #C9DFC9;
+}
+
+.aio-success-text {
+  color: #36734D;
+}
+
+.aio-success-bg {
+  background-color: #EAF3E9;
+}
+
+.aio-success-border {
+  border-color: #C9DFC9;
+}
