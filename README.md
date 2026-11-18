@@ -93,7 +93,7 @@ Ensure that the following are installed:
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/chrystalaa/aio-healthcare-platform.git
+git clone https://github.com/stellunyxx/aio-healthcare-platform.git
 ```
 
 **2. Navigate to the project directory**
