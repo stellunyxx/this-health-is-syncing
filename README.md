@@ -67,10 +67,10 @@ The analytics and monitoring features currently operate on simulated data and do
 
 The current prototype follows a conceptual four-layer architecture:
 
-1. **Presentation Layer** — Patient, Healthcare Facility, and LGU/DRRM portals.
-2. **Business Layer** — Appointment management, facility search and filtering, notification management, analytics, monitoring, and demonstration data generation.
-3. **Persistence Layer** — Functions responsible for storing and retrieving appointment records, notification states, and facility selection information.
-4. **Data Access Layer** — Browser localStorage, static healthcare facility data, and external OpenStreetMap resources.
+1. **Presentation Layer** — Patient, Healthcare Facility, and LGU/DRRM interfaces.
+2. **Business Logic Layer** — Appointment workflows, filtering, notifications, and analytics.
+3. **Data Management Layer** — Functions for reading, updating, and managing prototype records.
+4. **Data Sources and Storage** — Browser localStorage, static facility datasets, and OpenStreetMap resources.
 
 These layers represent logical responsibilities within the frontend application rather than independently deployed services.
 
@@ -99,7 +99,7 @@ git clone https://github.com/stellunyxx/this-health-is-syncing.git
 **2. Navigate to the project directory**
 
 ```bash
-cd aio-healthcare-platform
+cd this-health-is-syncing
 ```
 
 **3. Install dependencies**
@@ -156,6 +156,7 @@ The following components are planned for future implementation:
 - **Centralized Database** — Secure storage and retrieval of healthcare coordination records.
 - **Authentication and Authorization** — User authentication and role-based access controls.
 - **Cross-Device Synchronization** — Shared, synchronized information across patient, healthcare facility, and LGU interfaces.
+- **Government Data Interoperability** — Integrate authorized DOH facility datasets, standardized geographic identifiers, and relevant government open data sources through documented APIs and structured data exchange.
 
 Additional functionality and integrations will be evaluated as the project progresses.
 
